@@ -1,0 +1,12 @@
+{
+    "books" : [
+        {
+            "id": "1",
+            "title": "Le Petit Prince",
+            "author": "Antoine de Saint-Exupery",
+            "year": "1943",
+            "available": true,
+            "description": "autism"
+        }
+    ]
+}
