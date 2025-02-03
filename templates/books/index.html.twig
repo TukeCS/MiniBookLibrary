@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Book List{% endblock %}
+
+{% block body %}
+    <h1>Book List</h1>
+
+    <h2>Add a New Book</h2>
+    <form method="POST" action="{{ path('book_add') }}">
+        <input type="text" name="title" placeholder="Title" required><br>
+        <input type="text" name="author" placeholder="Author" required><br>
+        <input type="text" name="year" placeholder="Year" required><br>
+        <textarea name="description" placeholder="Description"></textarea><br>
+        <button type="submit">Add Book</button>
+    </form>
+
+    <h2>Available Books</h2>
+    <ul>
+        {% for book in books %}
+            <li>
+                <strong>{{ book.title }}</strong> by {{ book.author }} ({{ book.year }})<br>
+                Description: {{ book.description }}<br>
+                Status: 
+                {% if book.available %}
+                    <span style="color: green;">Available</span>
+                {% else %}
+                    <span style="color: red;">Not Available</span>
+                {% endif %}
+                <br>
+                <form method="POST" action="{{ path('book_remove', {'id': book.id}) }}" style="display:inline;">
+                    <button type="submit" onclick="return confirm('Are you sure you want to remove this book?')">Remove</button>
+                </form>
+            </li>
+        {% else %}
+            <li>No books available.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
