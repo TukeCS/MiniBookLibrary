@@ -8,6 +8,7 @@ MiniBookLibrary est une application permettant de gérer une bibliothèque de li
 ### Prérequis
 - Symfony
 - git
+- php 8.3
 
 ### Étapes d'installation
 1. Clonez le répôt:
