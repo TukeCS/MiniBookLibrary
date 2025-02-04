@@ -6,8 +6,8 @@ MiniBookLibrary est une application permettant de gérer une bibliothèque de li
 ## Installation
 
 ### Prérequis
-- Python 3.13 installé
-- pip installé
+- Symfony
+- git
 
 ### Étapes d'installation
 1. Clonez le répôt:
@@ -15,17 +15,12 @@ MiniBookLibrary est une application permettant de gérer une bibliothèque de li
    git clone https://github.com/TukeCS/MiniBookLibrary.git
    cd MiniBookLibrary
    ```
-2. les dépendances:
+2. Lancez l’application:
    ```sh
-   pip install -r requirements.txt
-   ```
-3. Lancez l’application :
-   ```sh
-   python app.py
+   symfony server:start
    ```
 
 ## Fonctionnalités
 - Ajout, modification et suppression de livres
-- Recherche et filtrage des livres
 - Gestion des utilisateurs et des emprunts
 - Interface utilisateur simple et intuitive
